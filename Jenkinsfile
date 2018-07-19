@@ -2,9 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('npm-build') {
             steps {
-                echo 'Building..'
+                echo "Branch is ${env.BRANCH_NAME}..."
+                sh 'npm install'
+            }
+        }
+        stage('karma') {
+            steps {
+                echo "Running karma"
+                sh ('karma start karma.conf.js')
             }
         }
         stage('Test') {
@@ -12,10 +19,6 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+       
     }
 }
