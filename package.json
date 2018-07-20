@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "",
   "dependencies": {
-    "@sap/approuter": "2.7.1",
     "karma": "^2.0.2",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
