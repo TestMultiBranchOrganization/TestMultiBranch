@@ -16,7 +16,6 @@ module.exports = function(config) {
       'karma-chrome-launcher',
       'karma-coverage',
       'karma-qunit',
-      'karma-junit-reporter',
       'karma-sonarqube-unit-reporter'
     ],
 
