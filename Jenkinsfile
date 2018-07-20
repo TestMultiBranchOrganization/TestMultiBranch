@@ -11,7 +11,7 @@ pipeline {
         stage('karma') {
             steps {
                 echo "Running karma"
-                sh ('karma start karma.conf.js')
+                sh 'karma start karma.conf.js'
             }
         }
         stage('Test') {
