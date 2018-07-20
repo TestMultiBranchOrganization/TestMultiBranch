@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = "C:/Users/MP054970.WHQ_NT_DOMAIN/AppData/Roaming/npm;%path%"
+        KARMA_HOME = "C:/Users/MP054970.WHQ_NT_DOMAIN/AppData/Roaming/npm"
     }
     stages {
         stage('npm-build') {
@@ -13,7 +13,7 @@ pipeline {
         stage('karma') {
             steps {
                 echo "Running karma"
-                bat 'karma start ./karma.conf.js';
+                bat '${KARMA_HOME}/karma start ./karma.conf.js';
                    
             }
         }
