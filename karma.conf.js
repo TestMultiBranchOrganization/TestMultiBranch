@@ -43,7 +43,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reportery
-    reporters: ['progress', 'junit','sonarqubeUnit','coverage'],
+    reporters: ['progress','sonarqubeUnit','coverage'],
 
 
     // web server port
@@ -77,16 +77,6 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity,
 
-  
-    junitReporter: {
-      outputDir: 'reports/junit', // results will be saved as $outputDir/$browserName.xml
-      outputFile: 'TESTS-qunit.xml', // if included, results will be saved as $outputDir/$browserName/$outputFile
-      suite: 'TESTS.js', // suite will become the package name attribute in xml testsuite element
-      useBrowserName:false, // add browser name to report and classes names
-      nameFormatter: undefined, // function (browser, result) to customize the name attribute in xml testcase element
-      properties: {}, // key value pair of properties to add to the <properties> section of the report
-      xmlVersion: '1' // use '1' if reporting to be per SonarQube 6.2 XML format
-    },
 
   sonarQubeUnitReporter: {
      sonarQubeVersion: 'LATEST',
