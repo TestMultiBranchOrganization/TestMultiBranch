@@ -11,7 +11,8 @@ pipeline {
         stage('karma') {
             steps {
                 echo "Running karma"
-                bat 'set path=C:/Users/MP054970.WHQ_NT_DOMAIN/AppData/Roaming/npm;%path%; karma start ./karma.conf.js';
+                bat 'set path=C:/Users/MP054970.WHQ_NT_DOMAIN/AppData/Roaming/npm;%path%';
+                bat 'karma start ./karma.conf.js';
                    
             }
         }
